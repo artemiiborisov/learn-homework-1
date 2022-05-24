@@ -15,13 +15,16 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {
+"Как дела?": "Хорошо!", 
+"Что делаешь?": "Программирую", 
+"Какие планы на вечер?": "Попить пивко",
+"Какой твой уровень английского?": "London is the capital of Great Britain"
+}
 
-def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
-if __name__ == "__main__":
-    ask_user(questions_and_answers)
+answer_pc = []
+while True:
+    user_answer = input("Задай вопрос: ")
+    if user_answer in questions_and_answers.keys():
+        answer_pc.append(questions_and_answers.get(user_answer))
+        print(*answer_pc)
