@@ -22,9 +22,14 @@ questions_and_answers = {
 "Какой твой уровень английского?": "London is the capital of Great Britain"
 }
 
-answer_pc = []
+def ask_user(answers_dict):
+     """
+     Замените pass на ваш код
+     """
 while True:
     user_answer = input("Задай вопрос: ")
     if user_answer in questions_and_answers.keys():
-        answer_pc.append(questions_and_answers.get(user_answer))
-        print(*answer_pc)
+        print(questions_and_answers.get(user_answer))
+
+if __name__ == "__main__":
+    ask_user(answers_dict)
