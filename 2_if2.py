@@ -14,15 +14,27 @@
   и выводя на экран результаты
 
 """
-def compare_str(stroka1, stroka2):
-  if type(stroka1) != str and type(stroka1) != str :
-    return 0
-  elif stroka1 == stroka2:
-    return 1
-  elif stroka1 != stroka2 and stroka2 == 'learn':
-    return 3
-  elif stroka1 != stroka2 and len(stroka1) > len(stroka2):
-    return 2
 
-stroka1, stroka2 = input(), input()
-print(compare_str(stroka1, stroka2))
+def main():
+     """
+     Эта функция вызывается автоматически при запуске скрипта в консоли
+     В ней надо заменить pass на ваш код
+     """
+
+def compare_str(string1, string2):
+    if type(string1) != str or type(string2) != str :
+        return 0
+    elif string1 == string2:
+        return 1
+    elif string1 != string2 and string2 == 'learn':
+        return 3
+    elif string1 != string2 and len(string1) > len(string2):
+        return 2
+    elif string1 != string2 and len(string1) < len(string2):
+        return 4
+
+string1, string2 = input('Введите текст1'), input('Введите текст2')
+print(compare_str(string1, string2))
+
+if __name__ == "__main__":
+     main()
